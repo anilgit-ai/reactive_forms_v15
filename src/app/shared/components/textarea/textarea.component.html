@@ -1,1 +1,34 @@
-<p>textarea works!</p>
+<div class="form-field">
+  <label *ngIf="label" class="form-label">
+    {{ label }}
+
+    <span *ngIf="isRequired" class="required"> * </span>
+  </label>
+
+  <textarea
+    pInputTextarea
+    [formControl]="control"
+    [rows]="rows"
+    [cols]="cols"
+    [autoResize]="autoResize"
+    [disabled]="disabled"
+    [placeholder]="placeholder"
+    [attr.maxlength]="maxlength"
+    [attr.minlength]="minlength"
+    class="w-full"
+  >
+  </textarea>
+
+  <div class="textarea-footer">
+    <small *ngIf="hint" class="hint">
+      {{ hint }}
+    </small>
+
+    <small *ngIf="maxlength" class="counter">
+      {{ currentLength }}/{{ maxlength }}
+    </small>
+  </div>
+
+  <app-validation-messages [control]="control" [label]="label">
+  </app-validation-messages>
+</div>

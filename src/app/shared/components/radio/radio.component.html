@@ -1,1 +1,31 @@
-<p>radio works!</p>
+<div class="form-field">
+  <label *ngIf="label" class="form-label">
+    {{ label }}
+
+    <span *ngIf="isRequired" class="required"> * </span>
+  </label>
+
+  <div class="radio-group" [ngClass]="direction">
+    <div class="radio-item" *ngFor="let option of options; let i = index">
+      <p-radioButton
+        [formControl]="control"
+        [inputId]="groupId + '-' + i"
+        [name]="groupId"
+        [value]="option.value"
+        [disabled]="option.disabled ?? false"
+      >
+      </p-radioButton>
+
+      <label [for]="groupId + '-' + i">
+        {{ option.label }}
+      </label>
+    </div>
+  </div>
+
+  <small *ngIf="hint" class="hint">
+    {{ hint }}
+  </small>
+
+  <app-validation-messages [control]="control" [label]="label">
+  </app-validation-messages>
+</div>

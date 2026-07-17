@@ -1,1 +1,29 @@
-<p>dropdown works!</p>
+<div class="form-field">
+  <label *ngIf="label" class="form-label">
+    {{ label }}
+
+    <span *ngIf="isRequired" class="required"> * </span>
+  </label>
+
+  <p-dropdown
+    [formControl]="control"
+    [options]="options"
+    optionLabel="label"
+    optionValue="value"
+    [placeholder]="placeholder"
+    [filter]="filter"
+    [showClear]="showClear"
+    [disabled]="disabled"
+    [emptyMessage]="emptyMessage"
+    appendTo="body"
+    styleClass="w-full"
+  >
+  </p-dropdown>
+
+  <small *ngIf="hint" class="hint">
+    {{ hint }}
+  </small>
+
+  <app-validation-messages [control]="control" [label]="label">
+  </app-validation-messages>
+</div>

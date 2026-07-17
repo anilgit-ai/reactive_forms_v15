@@ -1,0 +1,53 @@
+:host {
+  display: block;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.required {
+  color: #ef4444;
+  font-weight: 700;
+}
+
+.textarea-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.25rem;
+}
+
+.hint {
+  color: #6b7280;
+  font-size: 0.75rem;
+}
+
+.counter {
+  color: #6b7280;
+  font-size: 0.75rem;
+}
+
+:host ::ng-deep .p-inputtextarea {
+  width: 100%;
+  resize: vertical;
+}
+
+:host ::ng-deep .p-inputtextarea.ng-invalid.ng-touched {
+  border-color: #ef4444;
+}
+
+:host ::ng-deep .p-inputtextarea:enabled:focus {
+  box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.2);
+}

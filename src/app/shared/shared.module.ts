@@ -6,12 +6,27 @@ import { TextareaComponent } from './components/textarea/textarea.component';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
 import { RadioComponent } from './components/radio/radio.component';
-import { DatepickerComponent } from './components/datepicker/datepicker.component';
+import { DatePickerComponent } from './components/datepicker/datepicker.component';
 import { ValidationMessagesComponent } from './components/validation-messages/validation-messages.component';
 import { FileUploadComponent } from './components/file-upload/file-upload.component';
-
-
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { InputTextModule } from 'primeng/inputtext';
+import { PasswordModule } from 'primeng/password';
+import { DropdownModule } from 'primeng/dropdown';
+import { CalendarModule } from 'primeng/calendar';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { CheckboxModule } from 'primeng/checkbox';
+import { RadioButtonModule } from 'primeng/radiobutton';
+const FORM_COMPONENTS = [
+  ValidationMessagesComponent,
+  InputComponent,
+  PasswordComponent,
+  DropdownComponent,
+  DatePickerComponent,
+  TextareaComponent,
+  CheckboxComponent,
+  RadioComponent,
+];
 @NgModule({
   declarations: [
     InputComponent,
@@ -20,12 +35,21 @@ import { FileUploadComponent } from './components/file-upload/file-upload.compon
     DropdownComponent,
     CheckboxComponent,
     RadioComponent,
-    DatepickerComponent,
+    DatePickerComponent,
     ValidationMessagesComponent,
-    FileUploadComponent
+    FileUploadComponent,
   ],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    ReactiveFormsModule,
+    InputTextModule,
+    PasswordModule,
+    DropdownModule,
+    CalendarModule,
+    InputTextareaModule,
+    CheckboxModule,
+    RadioButtonModule,
+  ],
+  exports: [...FORM_COMPONENTS],
 })
-export class SharedModule { }
+export class SharedModule {}

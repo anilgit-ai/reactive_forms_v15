@@ -1,0 +1,33 @@
+:host {
+  display: block;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.required {
+  color: #ef4444;
+}
+
+.file-name {
+  margin-top: 0.5rem;
+  color: #374151;
+  font-size: 0.8rem;
+}
+
+.hint {
+  margin-top: 0.25rem;
+  color: #6b7280;
+  font-size: 0.75rem;
+}

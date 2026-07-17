@@ -1,1 +1,6 @@
-<p>validation-messages works!</p>
+<small
+  class="error-message"
+  *ngIf="control?.invalid && (control?.dirty || control?.touched)"
+>
+  {{ errorMessage }}
+</small>

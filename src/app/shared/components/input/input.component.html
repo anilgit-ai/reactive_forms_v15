@@ -1,1 +1,28 @@
-<p>input works!</p>
+<div class="form-field">
+  <label *ngIf="label" class="form-label">
+    {{ label }}
+
+    <span *ngIf="isRequired" class="required"> * </span>
+  </label>
+
+  <input
+    pInputText
+    class="w-full"
+    [formControl]="control"
+    [type]="type"
+    [placeholder]="placeholder"
+    [readonly]="readonly"
+    [disabled]="disabled"
+    [attr.maxlength]="maxlength"
+    [attr.minlength]="minlength"
+    [autocomplete]="autocomplete"
+    [autofocus]="autofocus"
+  />
+
+  <small *ngIf="hint" class="hint">
+    {{ hint }}
+  </small>
+
+  <app-validation-messages [control]="control" [label]="label">
+  </app-validation-messages>
+</div>

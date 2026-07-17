@@ -1,1 +1,29 @@
-<p>datepicker works!</p>
+<div class="form-field">
+  <label *ngIf="label" class="form-label">
+    {{ label }}
+
+    <span *ngIf="isRequired" class="required"> * </span>
+  </label>
+
+  <p-calendar
+    [formControl]="control"
+    [placeholder]="placeholder"
+    [showIcon]="showIcon"
+    [dateFormat]="dateFormat"
+    [disabled]="disabled"
+    [minDate]="$any(minDate)"
+    [maxDate]="$any(maxDate)"
+    [showButtonBar]="showButtonBar"
+    [readonlyInput]="readonlyInput"
+    appendTo="body"
+    styleClass="w-full"
+  >
+  </p-calendar>
+
+  <small *ngIf="hint" class="hint">
+    {{ hint }}
+  </small>
+
+  <app-validation-messages [control]="control" [label]="label">
+  </app-validation-messages>
+</div>

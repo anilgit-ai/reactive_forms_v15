@@ -1,1 +1,20 @@
-<p>file-upload works!</p>
+<div class="form-field">
+  <label *ngIf="label" class="form-label">
+    {{ label }}
+
+    <span *ngIf="isRequired" class="required"> * </span>
+  </label>
+
+  <input type="file" [accept]="accept" (change)="onFileChange($event)" />
+
+  <small class="file-name">
+    {{ fileName }}
+  </small>
+
+  <small *ngIf="hint" class="hint">
+    {{ hint }}
+  </small>
+
+  <app-validation-messages [control]="control" [label]="label">
+  </app-validation-messages>
+</div>

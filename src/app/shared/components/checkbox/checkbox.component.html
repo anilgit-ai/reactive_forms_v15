@@ -1,1 +1,23 @@
-<p>checkbox works!</p>
+<div class="form-field">
+  <div class="checkbox-container">
+    <p-checkbox
+      [formControl]="control"
+      [binary]="binary"
+      [disabled]="disabled"
+      [inputId]="inputId"
+    >
+    </p-checkbox>
+
+    <label [for]="inputId" class="checkbox-label">
+      {{ label }}
+      <span *ngIf="isRequired" class="required">*</span>
+    </label>
+  </div>
+
+  <small *ngIf="hint" class="hint">
+    {{ hint }}
+  </small>
+
+  <app-validation-messages [control]="control" [label]="label">
+  </app-validation-messages>
+</div>
