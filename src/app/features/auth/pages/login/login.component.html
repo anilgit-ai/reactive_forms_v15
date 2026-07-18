@@ -1,1 +1,29 @@
-<p>login works!</p>
+<div class="login-container">
+  <p-card header="Employee Management System">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+      <app-input
+        label="Email"
+        type="email"
+        autocomplete="email"
+        [control]="loginForm.controls.email"
+      >
+      </app-input>
+
+      <app-password
+        label="Password"
+        autocomplete="current-password"
+        [control]="loginForm.controls.password"
+      >
+      </app-password>
+
+      <button
+        pButton
+        type="submit"
+        label="Login"
+        icon="pi pi-sign-in"
+        class="w-full"
+        [loading]="isSubmitting"
+      ></button>
+    </form>
+  </p-card>
+</div>

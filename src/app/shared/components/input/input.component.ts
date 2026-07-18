@@ -18,8 +18,6 @@ export class InputComponent {
 
   @Input() readonly = false;
 
-  @Input() disabled = false;
-
   @Input() maxlength: number | null = null;
 
   @Input() minlength: number | null = null;

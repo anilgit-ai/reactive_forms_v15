@@ -13,6 +13,12 @@ export const VALIDATION_MESSAGES = {
     'Password must contain at least 8 characters, one uppercase letter, one lowercase letter, one number and one special character.',
 
   passwordMismatch: (): string => 'Passwords do not match.',
+  age: (requiredAge: number): string =>
+    `Age must be at least ${requiredAge} years.`,
+
+  fileSize: (): string => 'The selected file exceeds the maximum allowed size.',
+  fileType: (allowedTypes: string[]): string =>
+    `Allowed file types: ${allowedTypes.join(', ')}.`,
 
   minlength: (label: string, length: number): string =>
     `${label} must be at least ${length} characters.`,

@@ -35,14 +35,6 @@ export class FileUploadComponent {
 
     const file = input.files[0];
 
-    if (file.size > this.maxSize) {
-      this.control.setErrors({
-        fileSize: true,
-      });
-
-      return;
-    }
-
     this.fileName = file.name;
 
     this.control.setValue(file);
@@ -50,6 +42,8 @@ export class FileUploadComponent {
     this.control.markAsDirty();
 
     this.control.markAsTouched();
+
+    this.control.updateValueAndValidity();
 
     this.fileSelected.emit(file);
   }

@@ -7,14 +7,11 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./password.component.scss'],
 })
 export class PasswordComponent {
-  
   @Input() label = '';
 
   @Input() placeholder = '';
 
   @Input() control!: FormControl;
-
-  @Input() disabled = false;
 
   @Input() toggleMask = true;
 
