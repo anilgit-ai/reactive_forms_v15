@@ -9,12 +9,10 @@ const routes: Routes = [
       import('./features/auth/auth.module').then((m) => m.AuthModule),
   },
   {
-    path: 'dashboard',
+    path: '',
     canActivate: [AuthGuard],
     loadChildren: () =>
-      import('./features/dashboard/dashboard.module').then(
-        (m) => m.DashboardModule,
-      ),
+      import('./layout/layout.module').then((m) => m.LayoutModule),
   },
 
   {

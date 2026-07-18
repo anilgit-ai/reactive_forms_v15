@@ -1,0 +1,30 @@
+.page-title {
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.dashboard-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dashboard-icon {
+  font-size: 2rem;
+  color: #1976d2;
+}
+
+.dashboard-card h3 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.dashboard-card p {
+  margin: 0.25rem 0 0;
+  color: #6b7280;
+}

@@ -1,1 +1,15 @@
-<p>dashboard works!</p>
+<h2 class="page-title">Dashboard</h2>
+
+<div class="dashboard-grid">
+  <p-card *ngFor="let card of cards">
+    <div class="dashboard-card">
+      <i class="{{ card.icon }} dashboard-icon"> </i>
+
+      <div>
+        <h3>{{ card.value }}</h3>
+
+        <p>{{ card.title }}</p>
+      </div>
+    </div>
+  </p-card>
+</div>

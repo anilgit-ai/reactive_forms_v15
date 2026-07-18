@@ -1,9 +1,14 @@
-:host {
-  display: block;
+.sidebar {
+  width: 260px;
+  min-width: 260px;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  padding: 1rem;
+}
 
-  background: #1f2937;
-
-  color: white;
-
-  height: 100%;
+.sidebar-collapsed {
+  width: 70px;
+  min-width: 70px;
 }

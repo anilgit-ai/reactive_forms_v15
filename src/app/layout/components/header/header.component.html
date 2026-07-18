@@ -1,11 +1,28 @@
 <header class="header">
-  <div class="logo">EMS</div>
+  <button
+  pButton
+  type="button"
+  icon="pi pi-bars"
+  class="p-button-text"
+  (click)="toggleSidebar()">
+</button>
 
-  <div class="title">Employee Management System</div>
+  <div class="header__logo">Employee Management System</div>
 
-  <div class="actions">
-    <i class="pi pi-bell"></i>
+  <div class="header__actions">
+    <p-avatar shape="circle" label="{{ user?.name?.charAt(0) }}"> </p-avatar>
 
-    <i class="pi pi-user"></i>
+    <span class="user-name">
+      {{ user?.name }}
+    </span>
+
+    <button
+      pButton
+      type="button"
+      label="Logout"
+      icon="pi pi-sign-out"
+      class="p-button-text"
+      (click)="logout()"
+    ></button>
   </div>
 </header>
